@@ -1,0 +1,21 @@
+name: PCRemote
+options:
+  bundleIdPrefix: com.pcremote
+settings:
+  base:
+    IPHONEOS_DEPLOYMENT_TARGET: '17.0'
+    SWIFT_VERSION: '5.0'
+    GENERATE_INFOPLIST_FILE: YES
+    INFOPLIST_KEY_NSLocalNetworkUsageDescription: 'PC Remote se conecta a tu computadora por Wi-Fi.'
+    INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsLocalNetworking: YES
+    TARGETED_DEVICE_FAMILY: '1'
+targets:
+  PCRemote:
+    type: application
+    platform: iOS
+    sources: [PCRemote]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.pcremote.client
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_NSAppTransportSecurity_NSAllowsArbitraryLoads: YES
